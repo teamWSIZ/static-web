@@ -1,0 +1,65 @@
+<div class="col-md-9 boxed">
+
+    <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting (iloczyn x*y = {{x * y}}) text below as a natural lead-in to additional content.</p>
+            <input type="text" ng-model="x" placeholder="zmienna x">
+            <input type="text" ng-model="y" placeholder="zmienna y">
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md boxed">
+    <div class="card" >
+
+        <h3 class="card-header card-title bg-primary text-white">
+            Typy pytań
+        </h3>
+
+        <div class="card-body" >
+            <p>Typy pytań w systemie: </p>
+            <input ng-model="fff" placeholder="Filtruj..." class="iinput narrow-free2"/>
+
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <td class="col-sm-2"> qtid</td>
+                    <td class="col-sm-8"> opis</td>
+                    <td class="col-sm-2"> action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer">
+            <button type="button" class="btn btn-default" ng-click="loadTypes()">reload</button>
+            <button type="button" class="btn btn-default" ng-click="saveAllTypes()">zapisz wszystkie</button>
+            <button type="button" class="btn btn-default" ng-click="addType()">dodaj kategorię</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting (zmienna x={{x}}) text below as a natural lead-in to additional content.</p>
+            <input type="text" ng-model="x">
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</div>

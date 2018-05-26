@@ -1,0 +1,120 @@
+
+.boxed {
+    border-radius: 3px;
+    border: 1px solid #2a6496;
+    padding: 5px;
+    margin-bottom: 5px;
+
+}
+
+.debug {
+    border: 0px solid aquamarine;
+}
+
+.half {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.iinput {
+    border: none;
+    border-bottom: 1px solid lightslategray;
+    margin-bottom: 1px;
+}
+
+.clean_input {
+    border: none;
+    width: 90%;
+    border-bottom: 1px solid lightslategray;
+    margin-bottom: 1px;
+}
+
+
+.narrow8 {
+    width: 80%;
+}
+
+.narrow-free2 {
+    width: 20%;
+    max-width: 100px;
+}
+
+
+.narrow-box {
+    width: 400px;
+}
+
+.narrow-select {
+    max-width:100px;
+}
+
+.narrow-input {
+    max-width: 80px;
+}
+
+.wide-input {
+    min-width: 500px;
+}
+
+
+.glyphicon {
+    font-size: large;
+    cursor: pointer;
+    padding-right: 5px;
+    top: 3px;
+}
+
+.topnavbar {
+    background-color: #161a1e;
+    color: #a5adb4;
+    border-bottom: 1px solid black;
+    border-top: 1px solid blue;
+    height: 50px;
+}
+
+.mainbody {
+    padding-top: 10px;
+}
+
+.leftmenu {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.mainpanel {
+    border-top-left-radius: 3px;
+}
+
+.panel-body-padding {
+    padding-left: 5px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+
+.moveRight {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.moveCenter {
+    display: block;
+    margin: auto;
+}
+
+.text-larger {
+    font-size: larger;
+}
+
+
+.gray {
+    color: #bababa;
+}
+
+.icon-large {
+    font-size: large;
+}

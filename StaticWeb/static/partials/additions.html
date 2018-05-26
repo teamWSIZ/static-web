@@ -1,0 +1,62 @@
+<div class="card">
+
+    <h3 class="card-header card-title bg-info text-white">
+        Pytania
+    </h3>
+
+    <div class="card-body" >
+        <p>Pytania egzaminacyjne w systemie: </p>
+        <input ng-model="fff" placeholder="Filtruj..." class="iinput narrow-free2">
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th class="w-5"> Qid</th>
+                <th class="w-30"> Text</th>
+                <th class="w-20"> A1</th>
+                <th class="w-20"> A2</th>
+                <th class="w-20"> A3</th>
+                <th class="w-5">action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in M.questions | filter:fff">
+                <td> {{item.qid}}
+                </td>
+                <td class="clickable">
+                    <input type="text" ng-model="item.text" class="form-control" placeholder="Treść pytania">
+                </td>
+                <td ng-dblclick="item.correct=1">
+                    <input ng-model="item.answer1"
+                           ng-class="(item.correct==1?'bg-success':'bg-white')"
+                           class="form-control"
+                    >
+                </td>
+                <td ng-dblclick="item.correct=2">
+                    <input ng-model="item.answer2"
+                           ng-class="(item.correct==2?'bg-success':'bg-white')"
+                           class="form-control"
+                    >
+                </td>
+                <td ng-dblclick="item.correct=3">
+                    <input ng-model="item.answer3"
+                           ng-class="(item.correct==3?'bg-success':'bg-white')"
+                           class="form-control"
+                    >
+                </td>
+                <td>
+                    <span class="fa fa-save clickable" ng-click="saveQuestion(item)"></span>
+                    <span class="fa fa-trash clickable text-danger" ng-click="deleteQuestion(item)"></span>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-default" ng-click="loadQuestions()">reload</button>
+        <button type="button" class="btn btn-default" ng-click="saveAllQuestions()">zapisz wszystkie</button>
+        <button type="button" class="btn btn-default" ng-click="addQuestion()">dodaj pytanie</button>
+    </div>
+</div>

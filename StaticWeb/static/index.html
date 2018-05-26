@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="myApp" ng-controller="masterCtrl" xmlns:ng-model="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikacja kliencka</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/mainApp.js"></script>
+    <script src="js/controllers/masterCtrl.js"></script>
+
+
+</head>
+<body data-ng-cloak="">
+
+
+<div class="container-fluid">
+    <!--gets whole row-->
+    <ng-include src="'partials/topBar.html'"></ng-include>
+
+        <div data-ng-view="" class="row boxed">
+        </div>
+
+</div>
+
+
+</body>
+</html>
