@@ -7,6 +7,18 @@ angular.module('myApp.controllers')
 .controller('masterCtrl',
     ['$rootScope','$scope', '$http', '$timeout', '$interval',
         function ($rootScope, $scope, $http, $timeout, $interval) {
+
+            $scope.iloraz = 0;
+
+            $scope.wyliczIloraz = function (a, b) {
+                console.log('liczę...');
+                $scope.iloraz = a / b;
+            };
+
+
+
+            /// rzeczy z innych projektów
+
             //To jest uruchamiane przy każdym wejściu do widoku korzystającego z tego kontrolera
             //Lokalny obiekt modelu, tworzony przy każdym uruchomieniu kontrolera
             $scope.M = {};
