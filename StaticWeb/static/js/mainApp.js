@@ -17,6 +17,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).when('/view2', {
         templateUrl: urlBase + 'dataView.html',
         controller: 'masterCtrl'
+    }).when('/gridsystem', {
+        templateUrl: urlBase + 'gridsystemView.html',
+        controller: 'masterCtrl'
     });
 }]);
 
