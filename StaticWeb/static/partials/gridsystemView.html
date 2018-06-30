@@ -1,8 +1,66 @@
-<div class="col-md-2 col-12">
-A
+<style>
+    
+    .rowkk:nth-child(odd){
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+    
+    .colkk {text-align: center; }
+    
+    .colkk span {}
+    
+    .colkk:nth-child(odd){
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+    }
+    
+    span.btn {
+        -webkit-transition:  all 3s; /* Safari */
+        transition: all 3s;
+    }
+   
+    span.btn.animacja {
+            animation-name: example;
+            animation-duration: 4s;
+    }
+    
+    @keyframes example {
+        from {padding:0px;}
+        50% {padding:6px 30px;}
+        to {padding: 6px 12px;}
+    }
+    
+    
+    
+    
+    .rowkk {  
+        align-items: center;justify-content: center;align-content: center; 
+    }
+    
+</style>
+
+
+<div class="col-md col"></div>
+<div class="col-md col">
+    <h1>Gra gracz {{gracz?"2":"1"}}</h1>
+    <h2>{{komunikat}}</h2>
+
+
+    <div class="row rowkk" ng-repeat="elementy in kolo">
+        <div class="col-md colkk" ng-click="kkklik(element)" ng-repeat="(key,element) in elementy">
+            <span class="btn {{element.gracz?(element.gracz=='O'?'btn-success animacja':'btn-danger  animacja'):'btn-light'}}">
+                {{element.gracz?element.gracz:"&nbsp;"}}</span>
+        </div>
+    </div>
+
 </div>
 
-<div class="col-md col">
+<div class="col-md col"></div>
+
+
+
+
+<div class="col-md col d-none">
     
     <form action="" method="POST"> 
     
@@ -32,9 +90,5 @@ A
         
     </form>
     
-</div>
-
-<div class="col-md-2 col-2">
-C
 </div>
 

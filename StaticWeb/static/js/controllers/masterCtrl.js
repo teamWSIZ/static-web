@@ -9,7 +9,61 @@ angular.module('myApp.controllers')
         function ($rootScope, $scope, $http, $timeout, $interval) {
 
             $scope.iloraz = 0;
-
+            
+            $scope.kolo = [
+                [
+                    {},{},{}
+                ],
+                [
+                    {},{},{}
+                ],
+                [
+                    {},{},{}
+                ],
+            ]
+            
+            $scope.gracz = false; // dla gracz 1 i true dla gracz 2
+            
+            $scope.kkklik = function(element){
+                
+                 if($scope.komunikat) return;
+                
+                if(!element.ok){
+                element.ok = true;    
+                
+                element.gracz = ($scope.gracz?"X":"O");
+                $scope.gracz = !$scope.gracz;
+              }
+              
+                if(!$scope.komunikat)
+                        $scope.weryfikuj();
+            };
+            
+            $scope.weryfikuj = function()
+            {
+                $scope.komunikat = "";
+            
+                
+                if($scope.kolo[0][0].gracz!=undefined && $scope.kolo[0][0].gracz==$scope.kolo[0][1].gracz 
+                        && $scope.kolo[0][0].gracz==$scope.kolo[0][2].gracz)
+                    $scope.komunikat = "Wygrał gracz "+($scope.kolo[0][0].gracz=="X"?"2":"1")
+                
+                
+                if($scope.kolo[1][0].gracz!=undefined && $scope.kolo[1][0].gracz==$scope.kolo[1][1].gracz 
+                        && $scope.kolo[1][0].gracz==$scope.kolo[1][2].gracz)
+                    $scope.komunikat = "Wygrał gracz "+($scope.kolo[1][0].gracz=="X"?"2":"1")
+                
+                
+                if($scope.kolo[0][1].gracz!=undefined && $scope.kolo[0][1].gracz==$scope.kolo[1][1].gracz 
+                        && $scope.kolo[0][1].gracz==$scope.kolo[2][1].gracz)
+                    $scope.komunikat = "Wygrał gracz "+($scope.kolo[0][1].gracz=="X"?"2":"1")
+                
+                
+            
+            }
+            
+            
+            
             $scope.wyliczIloraz = function (a, b) {
                 console.log('liczę...');
                 $scope.iloraz = a / b;
